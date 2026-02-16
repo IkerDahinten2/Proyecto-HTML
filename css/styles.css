@@ -10,6 +10,7 @@ body {
     color: #FFFFFF;
     font-family: Arial, sans-serif;
   }
+
   :root {
     --bg-main: #1e1f2b;
     --bg-sidebar: #181a24;
@@ -25,4 +26,179 @@ body {
     color: var(--text-primary);
   }
     
-  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+
+/* Sidebar */
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 70px;
+    background: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    transition: width 0.4s ease;
+    overflow: hidden;
+}
+
+/* Expandir */
+.sidebar:hover{
+    width: 220px;
+}
+
+#toggle:checked ~ .sidebar{
+    width: 220px;
+}
+
+/* Botón */
+.menu-btn{
+    display: block;
+    padding: 20px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Lista */
+.sidebar ul{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar ul li{
+    padding: 15px 20px;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+/* Hover minimalista */
+.sidebar ul li a:hover{
+    color: #000;
+}
+
+/* Contenido */
+.contenido{
+    margin-left: 70px;
+    padding: 40px;
+    transition: margin-left 0.4s ease;
+}
+
+.sidebar:hover ~ .contenido{
+    margin-left: 220px;
+}
+
+#toggle:checked ~ .contenido{
+    margin-left: 220px;
+}
+
+/* Ocultar checkbox */
+#toggle{
+    display: none;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #2A2555 0%,
+    #1E1B3A 50%,
+    #171433 100%
+  );
+  color: white;
+}
+
+/* SIDEBAR */
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 80px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  transition: width 0.4s ease;
+  overflow: hidden;
+}
+
+/* Expandir */
+.sidebar:hover{
+  width: 220px;
+}
+
+/* Lista */
+.sidebar ul{
+  list-style: none;
+  padding-top: 40px;
+}
+
+.sidebar ul li{
+  margin: 20px 0;
+}
+
+.sidebar ul li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+/* Imagen */
+.sidebar ul li a img{
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+}
+
+/* Texto oculto cuando está comprimido */
+.sidebar ul li a span{
+  margin-left: 20px;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+/* Mostrar texto al expandir */
+.sidebar:hover ul li a span{
+  opacity: 1;
+}
+
+/* Hover efecto */
+.sidebar ul li a:hover{
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+}
+
+/* Contenido */
+.contenido{
+  margin-left: 80px;
+  padding: 40px;
+  transition: margin-left 0.4s ease;
+}
+
+.sidebar:hover ~ .contenido{
+  margin-left: 220px;
+}
