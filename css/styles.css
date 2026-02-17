@@ -201,3 +201,45 @@ body{
   opacity: 0.05;
   pointer-events: none;
 }
+
+/* ========================= */
+/* 📱 MODO TELEFONO */
+/* ========================= */
+
+@media (max-width: 768px){
+
+  /* Sidebar más pequeña */
+  .sidebar{
+    width: 60px;
+  }
+
+  .sidebar:hover{
+    width: 180px;
+  }
+
+  /* Contenido se ajusta */
+  .contenido{
+    margin-left: 60px;
+    padding: 20px;
+  }
+
+  .sidebar:hover ~ .contenido{
+    margin-left: 180px;
+  }
+
+  /* Grid en 1 sola columna */
+  .grid-canciones{
+    grid-template-columns: 1fr;
+  }
+
+  /* Cards más compactas */
+  .card img{
+    height: 140px;
+  }
+
+  /* Títulos más pequeños */
+  h1{
+    font-size: 22px;
+  }
+
+}
