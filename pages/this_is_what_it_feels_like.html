@@ -84,31 +84,5 @@
 
     </div>
 
-<script>
-const audio = document.getElementById("audio");
-const playBtn = document.getElementById("play");
-const likeBtn = document.getElementById("like");
-const vinyl = document.querySelector(".vinyl");
-
-let isPlaying = false;
-
-playBtn.addEventListener("click", () => {
-    if (!isPlaying) {
-        audio.play();
-        playBtn.textContent = "⏸";
-        vinyl.classList.add("spin");
-    } else {
-        audio.pause();
-        playBtn.textContent = "▶";
-        vinyl.classList.remove("spin");
-    }
-    isPlaying = !isPlaying;
-});
-
-likeBtn.addEventListener("click", () => {
-    likeBtn.classList.toggle("active");
-});
-</script>
-
 </body>
 </html>
