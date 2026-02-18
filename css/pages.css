@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(
+        180deg,
+        #2A2555 0%,
+        #1E1B3A 50%,
+        #171433 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.player-container {
+    text-align: center;
+}
+
+.logo {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.album-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
+.cover {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 40px rgba(138, 43, 226, 0.5);
+}
+
+.album-wrapper {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    margin: auto;
+}
+
+.cover {
+    width: 260px;
+    height: 260px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 40px rgba(138, 43, 226, 0.6);
+}
+
+.vinyl {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    top: -80px;
+    left: -80px;
+    z-index: 1;
+
+    filter: blur(50px);
+    opacity: 0.8;
+
+    background: radial-gradient(circle, #8a2be2 0%, #000 60%);
+
+    animation: neonFlow 8s infinite alternate;
+}
+
+
+
+.spin {
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.song-title {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls button {
+    background: #3b2f75;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    background: #5a4fcf;
+    transform: scale(1.1);
+}
+
+.like.active {
+    color: red;
+}
+
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 80px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  transition: width 0.4s ease;
+  overflow: hidden;
+}
+

@@ -2,14 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Thunder | MusicStream</title>
+    <title>Crear Cuenta | MusicStream</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/favicon.png">
 
-    <!-- CSS NUEVO del reproductor -->
-    <link rel="stylesheet" href="../css/pages.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/profile.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -61,54 +60,22 @@
     </nav>
 </aside>
       
-    <div class="player-container">
+<div class="main-content">
 
-        <h1 class="logo">MusicStream</h1>
+    <div class="form-container">
+        <h1>Crear Cuenta</h1>
 
-        <div class="album-wrapper">
-            <div class="vinyl"></div>
-            <img src="../images/thunder.jpg" class="cover">
-        </div>
+        <form>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="text" placeholder="Nombre de usuario" required>
+            <input type="password" placeholder="Contraseña" required>
+            <input type="password" placeholder="Confirmar contraseña" required>
 
-        <h2 class="song-title">Gabry Ponte</h2>
-        <h2 class="song-title">Thunder</h2>
-
-        <div class="controls">
-            <button id="prev">⏮</button>
-            <button id="play">▶</button>
-            <button id="next">⏭</button>
-            <button id="like" class="like">♡</button>
-        </div>
-
-        <audio id="audio" src="../assets/bangarang.mp3"></audio>
-
+            <button type="submit">Registrarse</button>
+        </form>
     </div>
 
-<script>
-const audio = document.getElementById("audio");
-const playBtn = document.getElementById("play");
-const likeBtn = document.getElementById("like");
-const vinyl = document.querySelector(".vinyl");
-
-let isPlaying = false;
-
-playBtn.addEventListener("click", () => {
-    if (!isPlaying) {
-        audio.play();
-        playBtn.textContent = "⏸";
-        vinyl.classList.add("spin");
-    } else {
-        audio.pause();
-        playBtn.textContent = "▶";
-        vinyl.classList.remove("spin");
-    }
-    isPlaying = !isPlaying;
-});
-
-likeBtn.addEventListener("click", () => {
-    likeBtn.classList.toggle("active");
-});
-</script>
+</div>
 
 </body>
 </html>

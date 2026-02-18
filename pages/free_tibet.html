@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Free Tibet | MusicStream</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+
+    <!-- CSS NUEVO del reproductor -->
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav class="sidebar">
+
+        <ul>
+            <li>
+                <a href="..">
+                    <img src="../images/home4.png" alt="Home">
+                    <span>HOME</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="barra busqueda.html">
+                    <img src="../images/buscar.jpg" alt="Buscar">
+                    <span>BUSCAR</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <img src="../images/playlist.jpg" alt="Playlist">
+                    <span>PLAYLIST</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <img src="../images/artistas.jpg" alt="Artistas">
+                    <span>ARTISTAS</span>
+                </a>
+            </li>
+            <li>
+            <a href="../pages/perfil.html">
+                <img src="../images/perfil icono.jpg" alt="Perfil">
+                <span>PERFIL</span>
+            </a>
+            </li>
+            <li>
+            <a href="carrito.html">
+            <img src="../images/cart.png" alt="Carrito">
+            <span>CARRITO</span>
+            </a>
+            </li>
+        </ul>
+
+    </nav>
+</aside>
+      
+    <div class="player-container">
+
+        <h1 class="logo">MusicStream</h1>
+
+        <div class="album-wrapper">
+            <div class="vinyl"></div>
+            <img src="../images/free tibet.jpg" class="cover">
+        </div>
+
+        <h2 class="song-title">Free Tibet</h2>
+        <h2 class="song-title">Vini Vici</h2>
+
+        <div class="controls">
+            <button id="prev">⏮</button>
+            <button id="play">▶</button>
+            <button id="next">⏭</button>
+            <button id="like" class="like">♡</button>
+        </div>
+
+        <audio id="audio" src="../assets/bangarang.mp3"></audio>
+
+    </div>
+
+<script>
+const audio = document.getElementById("audio");
+const playBtn = document.getElementById("play");
+const likeBtn = document.getElementById("like");
+const vinyl = document.querySelector(".vinyl");
+
+let isPlaying = false;
+
+playBtn.addEventListener("click", () => {
+    if (!isPlaying) {
+        audio.play();
+        playBtn.textContent = "⏸";
+        vinyl.classList.add("spin");
+    } else {
+        audio.pause();
+        playBtn.textContent = "▶";
+        vinyl.classList.remove("spin");
+    }
+    isPlaying = !isPlaying;
+});
+
+likeBtn.addEventListener("click", () => {
+    likeBtn.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
