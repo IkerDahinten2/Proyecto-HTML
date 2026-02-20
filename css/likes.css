@@ -6,15 +6,21 @@
     font-family: 'Ubuntu', sans-serif;
   }
   
-.header{
-    align-items: left;
-    margin-bottom: 50px;
+
+.song-list h3{
+    margin-bottom: 20px;
 }
 
-.main-content{
-    margin-left: 180px;
-}
+.Canciones{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.05);
+    transition: 0.3s;
+    }
 
-.main-content {
-    color: rgba(85, 0, 165, 0.658);
+.playbutton{
+    background-color: blue;
 }
