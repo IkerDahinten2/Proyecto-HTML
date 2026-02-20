@@ -202,9 +202,6 @@ body{
   pointer-events: none;
 }
 
-/* ========================= */
-/* 📱 MODO TELEFONO */
-/* ========================= */
 
 @media (max-width: 768px){
 
